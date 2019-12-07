@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>Race Results Engine XML</TITLE>
+<LINK REL="stylesheet" type="text/css" href="css/common.css"/>
+<SCRIPT LANGUAGE="Javascript" SRC="xsl_js/admin.js"></SCRIPT>
+</HEAD>
+<BODY ONLOAD="initVerfRules()" ONSELECTSTART="return false" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONCLICK="clean()">
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" HEIGHT="100%" WIDTH="100%">
+  <TR>
+	<TD CLASS="titleOff" ONMOUSEOVER="swapClass(this, 'titleOver')" ONMOUSEOUT="swapClass(this, 'titleOff')" ALIGN="LEFT" VALIGN="TOP" COLSPAN="2" STYLE="border-top: 1px solid #99ccff;border-left: 1px solid #99ccff;border-bottom: 1px solid black;border-right: 1px solid black;background-color: #6699cc;" HEIGHT="20">
+		  Race Results Engine
+		<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+		</TABLE>
+	</TD>
+  </TR>
+  <TR>
+    <TD WIDTH="260" HEIGHT="100%" NOWRAP="true" STYLE="border-right: 1px solid black;" VALIGN="TOP">
+	  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" HEIGHT="100%" WIDTH="100%">
+        <TR>
+          <TD STYLE="background-color: #5389bc">
+            <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="1">
+              <TR>
+                <TD><DIV CLASS="bOut" ONMOUSEOVER="swapClass(this, 'bOver')" ONMOUSEOUT="swapClass(this, 'bOut')" ONMOUSEDOWN="swapClass(this, 'bOverWait')" ONMOUSEUP="swapClass(this, 'bOver')" ONCLICK="expandAll(folderTree)">Expand</DIV></TD>
+                <TD><DIV CLASS="bOut" ONMOUSEOVER="swapClass(this, 'bOver')" ONMOUSEOUT="swapClass(this, 'bOut')" ONMOUSEDOWN="swapClass(this, 'bOverWait')" ONMOUSEUP="swapClass(this, 'bOver')" ONCLICK="collapse(folderTree)">Minimize</DIV></TD>
+              </TR>
+            </TABLE>
+          </TD>
+        </TR>
+        <TR>
+	      <TD HEIGHT="100%">
+            <DIV ID="folderTree" STYLE="padding-top: 8px;width: 100%;height: 100%;overflow: auto;"></DIV>
+  	      </TD>
+        </TR>
+	  </TABLE>
+    </TD>
+    <TD WIDTH="100%" ID="content" ALIGN="LEFT" VALIGN="TOP">
+      <!-- Content -->
+    </TD>
+  </TR>
+</TABLE>
+</BODY>
+</HTML>
