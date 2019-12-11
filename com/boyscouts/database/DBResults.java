@@ -1,6 +1,5 @@
 /*
  * @author:			Owner
- * date:				Dec 9, 2003
  * Package:			com.boyscouts.database
  * File Name:		DBResults.java
  */
@@ -10,7 +9,6 @@ import java.util.Vector;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 3, 2004<BR>
  * Package:     com.boyscouts.database<BR>
  * File Name:   DBResults.java<BR>
  * Type Name:   DBResults<BR>
