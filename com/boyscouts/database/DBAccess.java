@@ -1,6 +1,5 @@
 /*
  * @author:			Owner
- * date:				Dec 9, 2003
  * Package:			com.boyscouts.database
  * File Name:		DBAccess.java
  */
@@ -20,7 +19,6 @@ import com.boyscouts.domain.Log;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 3, 2004<BR>
  * Package:     com.boyscouts.database<BR>
  * File Name:   DBAccess.java<BR>
  * Type Name:   DBAccess<BR>

@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Dec 11, 2003
  * Package:		com.boyscouts.database
  * File Name:		DBTask.java
  */
@@ -14,7 +13,6 @@ import com.boyscouts.domain.Log;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 3, 2004<BR>
  * Package:     com.boyscouts.database<BR>
  * File Name:   DBTask.java<BR>
  * Type Name:   DBTask<BR>
