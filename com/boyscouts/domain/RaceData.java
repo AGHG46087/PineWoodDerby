@@ -1,6 +1,5 @@
 /*
  * @author:			Owner
- * date:				Dec 9, 2003
  * Package:			com.boyscouts.domain
  * File Name:		RaceData.java
  */
@@ -18,7 +17,6 @@ import com.hgutil.data.FixedDouble;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 2, 2004<BR>
  * Package:     com.boyscouts.domain<BR>
  * File Name:   RaceData.java<BR>
  * Type Name:   RaceData<BR>

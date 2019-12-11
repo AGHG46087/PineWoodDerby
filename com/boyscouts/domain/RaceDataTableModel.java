@@ -17,7 +17,6 @@ import com.hgtable.HGTableModel;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 2, 2004<BR>
  * Package:     com.boyscouts.domain<BR>
  * File Name:   RaceDataTableModel.java<BR>
  * Type Name:   RaceDataTableModel<BR>
@@ -40,7 +39,6 @@ public class RaceDataTableModel extends HGTableModel
 
   /**
    * author:      hgrein<BR>
-   * date:        Jun 2, 2004<BR>
    * Package:     com.boyscouts.domain<BR>
    * File Name:   RaceDataTableModel.java<BR>
    * Type Name:   ColumnListener<BR>
