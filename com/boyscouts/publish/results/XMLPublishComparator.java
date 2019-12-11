@@ -4,7 +4,6 @@ import com.boyscouts.domain.RacerPerson;
 
 /**
  * author:		 	Owner
- * date:		    Dec 9, 2003
  * Package:			com.boyscouts.domain
  * File Name:		XMLPublishComparator.java
  * Type Name:		XMLPublishComparator

@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Dec 17, 2003
  * Package:		com.boyscouts.publish.results
  * File Name:		XMLPublishResults.java
  */
@@ -18,7 +17,6 @@ import com.boyscouts.util.track.TrackUtils;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 7, 2004<BR>
  * Package:     com.boyscouts.publish.results<BR>
  * File Name:   XMLPublishResults.java<BR>
  * Type Name:   XMLPublishResults<BR>
