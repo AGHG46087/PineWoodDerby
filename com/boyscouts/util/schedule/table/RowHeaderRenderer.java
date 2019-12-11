@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Jan 2, 2004
  * Package:		com.boyscouts.util.schedule.table
  * File Name:		RowHeaderRenderer.java
  */
@@ -17,7 +16,6 @@ import javax.swing.table.JTableHeader;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 7, 2004<BR>
  * Package:     com.boyscouts.util.schedule.table<BR>
  * File Name:   RowHeaderRenderer.java<BR>
  * Type Name:   RowHeaderRenderer<BR>

@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Dec 17, 2003
  * Package:		examples.swing.jtable.rowHeader
  * File Name:		OverallRaceScheduleTablePanel.java
  */
@@ -46,7 +45,6 @@ import com.hgutil.swing.event.PopupListener;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 7, 2004<BR>
  * Package:     com.boyscouts.util.schedule.table<BR>
  * File Name:   OverallRaceScheduleTablePanel.java<BR>
  * Type Name:   OverallRaceScheduleTablePanel<BR>
@@ -100,7 +98,6 @@ public class OverallRaceScheduleTablePanel extends JPanel implements Printable
 
   /**
    * author:      Hans-Jurgen Greiner<BR>
-   * date:        May 24, 2004<BR>
    * Package:     com.boyscouts.util.schedule.table<BR>
    * File Name:   OverallRaceScheduleTablePanel.java<BR>
    * Type Name:   PopupTrigger<BR>
@@ -250,7 +247,6 @@ public class OverallRaceScheduleTablePanel extends JPanel implements Printable
   {
     /**
      * @author:     Hans-Jurgen Greiner<BR>
-     * date:        May 24, 2004<BR>
      * Package:     com.boyscouts.util.schedule.table<BR>
      * File Name:   OverallRaceScheduleTablePanel.java<BR>
      * Type Name:   DisplayPrintPreview<BR>

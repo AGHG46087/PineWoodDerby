@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Jan 2, 2004
  * Package:		com.boyscouts.util.schedule.table
  * File Name:		RaceScheduleTableModel.java
  */
@@ -14,7 +13,6 @@ import com.hgtable.ColumnDataCellTooltip;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 7, 2004<BR>
  * Package:     com.boyscouts.util.schedule.table<BR>
  * File Name:   RaceScheduleTableModel.java<BR>
  * Type Name:   RaceScheduleTableModel<BR>
