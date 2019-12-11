@@ -1,6 +1,5 @@
 /*
  * @author: Owner 
- * date: Dec 8, 2003 
  * Package: com.boyscouts.app File Name:
  * SetupPanel.java
  */
@@ -37,7 +36,6 @@ import com.hgutil.swing.MaxLengthTextField;
 
 /**
  * author: Owner 
- * date: Dec 8, 2003 
  * Package: com.boyscouts.app 
  * File Name: SetupPanel.java 
  * Type Name: SetupPanel 
@@ -192,7 +190,6 @@ public class SetupPanel extends JPanel implements FieldLengths
 
   /**
    * author:	 		Owner
-   * date:				Dec 8, 2003
    * Package:			com.boyscouts.app
    * File Name:		SetupPanel.java
    * Type Name:		ActionTrigger
@@ -280,7 +277,7 @@ public class SetupPanel extends JPanel implements FieldLengths
           }
           else
           { // Yeah baby, yeah, do I make you horny, do I?
-            JOptionPane.showMessageDialog(null, "Daq Card ARM,\nValidate the Gate is Armed", "DAQ ARMING", JOptionPane.INFORMATION_MESSAGE);
+NFORMATION_MESSAGE);
           }
         }
       }
@@ -304,7 +301,7 @@ public class SetupPanel extends JPanel implements FieldLengths
         }
         else
         { // Shagadelic baby, yeah
-          JOptionPane.showMessageDialog(null, "Daq Card DISARM,\nValidate the Gate is Disarmed", "DAQ DISARMING", JOptionPane.INFORMATION_MESSAGE);
+nPane.INFORMATION_MESSAGE);
         }
       }
       else
@@ -330,7 +327,6 @@ public class SetupPanel extends JPanel implements FieldLengths
           String msg = "Prior to Lane Test\nBe prepared to manually flag all lanes\nBefore the Timeout Value of [" + value + "] seconds";
           JOptionPane.showMessageDialog(null, msg, "DAQ LANE TEST", JOptionPane.INFORMATION_MESSAGE);
           // Refresh the display
-          SetupPanel.this.update(SetupPanel.this.getGraphics());
           daqAccess.fireReadLaneSignalsTest();
           if (daqAccess.hasError())
           { // GEEEEZ, here we go again
@@ -338,7 +334,6 @@ public class SetupPanel extends JPanel implements FieldLengths
             JOptionPane.showMessageDialog(null, msg, "DAQ LANE TEST", JOptionPane.ERROR_MESSAGE);
           }
           else
-          { // Cool, now we have the data, lets up date-em boyz
             boolean[] taggedLanes = daqAccess.getTaggedLanes();
             for (int i = 0; i < taggedLanes.length; i++)
             {
@@ -415,7 +410,6 @@ public class SetupPanel extends JPanel implements FieldLengths
       idealTotalTime.setValue(trackUtils.getIdealTotalTime());
       fullTrackLength.setValue(trackUtils.getTrackLengthInches());
     }
-    this.update(this.getGraphics());
   }
   /**
    * Method clearTrackLengthAndHeightSettings.  Method Will Clear all values stored in the 
@@ -438,7 +432,6 @@ public class SetupPanel extends JPanel implements FieldLengths
     idealFinishSpeed.setValue(trackUtils.getIdealFinishSpeed());
     idealTotalTime.setValue(trackUtils.getIdealTotalTime());
     fullTrackLength.setValue(trackUtils.getTrackLengthInches());
-    this.update(this.getGraphics());
   }
   /**
    * Method createAllPanels.  Creates all Sub Panels for this Panel

@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Dec 12, 2003
  * Package:		com.boyscouts.app
  * File Name:		SearchRacerDialog.java
  */
@@ -44,7 +43,6 @@ import com.hgutil.swing.event.PopupListener;
 
 /**
  * author:     Owner
- * date:        Dec 12, 2003
  * Package:     com.boyscouts.app
  * File Name:   SearchRacerDialog.java
  * Type Name:   SearchRacerDialog
@@ -111,7 +109,6 @@ public class SearchRacerDialog extends JDialog
 
   /**
    * author:      Owner
-   * date:        Dec 11, 2003
    * Package:     com.boyscouts.app
    * File Name:   NewRacerDialog.java
    * Type Name:   ActionTrigger
