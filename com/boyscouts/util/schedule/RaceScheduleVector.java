@@ -8,7 +8,6 @@ import java.util.Vector;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 2, 2004<BR>
  * Package:     com.boyscouts.util.schedule<BR>
  * File Name:   RaceScheduleVector.java<BR>
  * Type Name:   RaceScheduleVector<BR>

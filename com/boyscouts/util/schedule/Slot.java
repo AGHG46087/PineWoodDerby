@@ -1,7 +1,6 @@
 package com.boyscouts.util.schedule;
 
 /*
- * Created on Dec 23, 2003
  * Tim Cutler
  */
 public class Slot

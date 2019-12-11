@@ -1,7 +1,6 @@
 package com.boyscouts.util.schedule;
 
 /*
- * Created on Dec 21, 2003
  * Tim Cutler
  */
 import java.util.*;
