@@ -1,6 +1,5 @@
 /*
  * @author:			Owner
- * date:				Dec 9, 2003
  * Package:			com.boyscouts.domain
  * File Name:		RacerContainer.java
  */
@@ -18,7 +17,6 @@ import com.hgutil.ParseData;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 2, 2004<BR>
  * Package:     com.boyscouts.domain<BR>
  * File Name:   RacerContainer.java<BR>
  * Type Name:   RacerContainer<BR>
