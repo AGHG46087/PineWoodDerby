@@ -45,7 +45,6 @@ import javax.swing.plaf.metal.MetalLookAndFeel;
 import DaqDigIOAccess.DaqDigIOAccess;
 
 import com.boyscouts.database.RaceARamaDB;
-import com.boyscouts.database.UpdateRacerPersonDBTask;
 import com.boyscouts.domain.FieldLengths;
 import com.boyscouts.domain.Log;
 import com.boyscouts.domain.RaceDataContainer;
@@ -60,7 +59,6 @@ import com.hgutil.datarenderer.HGTableColorModel;
 import com.hgutil.swing.themes.ObsidianTheme;
 
 /**
- * author: Owner date: Dec 15, 2003 Package: com.boyscouts.app File Name:
  * RaceARama.java Type Name: RaceARama Description: Main Application Frame for
  * the Race - A - Rama application
  */
@@ -185,7 +183,6 @@ public class RaceARama extends JFrame implements FieldLengths
 
   /**
    * author:      hgrein<BR>
-   * date:        May 27, 2004<BR>
    * Package:     com.boyscouts.app<BR>
    * File Name:   RaceARama.java<BR>
    * Type Name:   ActionTrigger<BR>
@@ -254,7 +251,6 @@ public class RaceARama extends JFrame implements FieldLengths
 
   /**
    * author:      hgrein<BR>
-   * date:        May 27, 2004<BR>
    * Package:     com.boyscouts.app<BR>
    * File Name:   RaceARama.java<BR>
    * Type Name:   ChangeLookAndFeelAction<BR>
@@ -298,7 +294,6 @@ public class RaceARama extends JFrame implements FieldLengths
 
   /**
    * author:      hgrein<BR>
-   * date:        May 27, 2004<BR>
    * Package:     com.boyscouts.app<BR>
    * File Name:   RaceARama.java<BR>
    * Type Name:   TabListener<BR>
@@ -334,7 +329,6 @@ public class RaceARama extends JFrame implements FieldLengths
       // Record our new index if it is at least 0 and change the refresh the
       // Display
       java.awt.Component comp = RaceARama.this.tabPane.getSelectedComponent();
-      comp.update(comp.getGraphics());
     }
   }
   /**
@@ -532,7 +526,7 @@ public class RaceARama extends JFrame implements FieldLengths
     WinnerRaceContainer.setTopRaceSize(getString("RaceARama.MenuBar.FileMenu.top_count_value"));
     String raceTopRacersString = getString("RaceARama.MenuBar.FileMenu.race_top_racers");
     String exportTopRacers = getString("RaceARama.MenuBar.FileMenu.export_top_racers");
-    // The Application will set Enabled and Disabled MenuItem in the methods - fireClientUpdates(), raceTheTopRacersOfAllRacers()
+lRacers()
     raceTopRacersItem = HGMenuItem.makeMenuItem(raceTopRacersString, raceTopRacersString, null);
 
     JMenu fileMenu = HGMenuItem.makeMenu("File", 'F', new Object[]{newRaceItem, renameRaceItem, null, topCountItem, raceTopRacersItem, exportTopRacers, null,
@@ -591,19 +585,13 @@ public class RaceARama extends JFrame implements FieldLengths
     }
   }
   /**
-   * Method fireClientUpdates. Method to fire Updates where necessary. If the
    * racerViewFrame does not exist. Then we will simply tell the racer container
    * maintain the current winners. If it does exist. Then signal the frame to
-   * update its displays. If there is any refereshing of data it should
-   * potentially Update as required.
    */
-  public void fireClientUpdates( boolean updateWinnerContainer )
   {
     if (racerViewFrame != null)
     {
-      racerViewFrame.updateDisplay();
     }
-    if (updateWinnerContainer)
     {
       WinnerRaceContainer.getInstance().addRacerContainer(getRaceName(), racersContainer);
     }
@@ -853,7 +841,6 @@ public class RaceARama extends JFrame implements FieldLengths
     else
     {
       Timer timer = new Timer();
-      timer.schedule(new UpdateRacerPersonDBTask(racerCont), 100, 100);
     }
     WebPublishFrame webPublish = new WebPublishFrame(RaceARama.this, racerCont, this.raceName);
     webPublish.setVisible(true);
@@ -929,7 +916,6 @@ public class RaceARama extends JFrame implements FieldLengths
     }
   }
   /**
-   * Stores the current L&F, and calls updateLookAndFeel,
    * @param laf The Loof and Feel constant we want to display
    */
   private void setLookAndFeel( String laf )
@@ -948,7 +934,6 @@ public class RaceARama extends JFrame implements FieldLengths
         HGTableColorModel.getInstance().setTheme(DEFAULT_METAL_THEME);
       }
       currentLookAndFeel = laf;
-      updateLookAndFeel();
     }
     Log.debug("setLookAndFeel() - Setting Look and Feel...Done");
   }
@@ -994,7 +979,6 @@ public class RaceARama extends JFrame implements FieldLengths
       // Load Preliminary Data
       racersContainer = RaceARamaDB.getAllRacers(new GregorianCalendar(), this.getRaceName());
     }
-    // Update any Name change, as the name change can ocurr before the containers
     racersContainer.setRaceName(this.getRaceName());
     // Create a Vector for the Race Schedule
     // Create a Empty RaceDataContainer
@@ -1003,7 +987,6 @@ public class RaceARama extends JFrame implements FieldLengths
     // If we have the Racers View Up, then we know what to do.
     if (this.racerViewFrame != null)
     {
-      this.racerViewFrame.updateDisplay();
     }
     if (tabPane != null)
     {
@@ -1019,7 +1002,6 @@ public class RaceARama extends JFrame implements FieldLengths
   {
     /**
      * @author:     hgrein<BR>
-     * date:        May 27, 2004<BR>
      * Package:     com.boyscouts.app<BR>
      * File Name:   RaceARama.java<BR>
      * Type Name:   ShowSplashScreenTask<BR>
@@ -1042,20 +1024,13 @@ public class RaceARama extends JFrame implements FieldLengths
   }
 
   /**
-   * Method updateLookAndFeel. Updates the UIManager and Swing Utilities to
-   * update the Look and Feel
    */
-  private void updateLookAndFeel()
   {
-    Log.debug("updateLookAndFeel() - Updating UI Look and Feel...");
     try
     {
       UIManager.setLookAndFeel(currentLookAndFeel);
-      // update LAF for the toplevel frame, too
-      SwingUtilities.updateComponentTreeUI(this);
       if (racerViewFrame != null)
       {
-        SwingUtilities.updateComponentTreeUI(racerViewFrame);
       }
     }
     catch (Exception ex)

@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Dec 29, 2003
  * Package:		com.boyscouts.app
  * File Name:		RaceSchedulePanel.java
  */
@@ -51,7 +50,6 @@ import com.hgutil.swing.GridBagHelper;
 import com.hgutil.swing.IntegerTextField;
 
 /**
- * author: Owner <BR>date: Dec 29, 2003 <BR>Package: com.boyscouts.app <BR>
  * File Name: RaceSchedulePanel.java <BR>Type Name: RaceSchedulePanel <BR>
  * Description: Creates the Scheduling Panel. The Scheduling Panel provides
  * support for Scheduling and Running the Race
@@ -61,8 +59,6 @@ public class RaceSchedulePanel extends JPanel
 {
   /** Field <code>serialVersionUID</code> : long */
   private static final long serialVersionUID = 3688507684001165364L;
-  /** Field <code>UPDATE_WAIT_TIME</code> : int */
-  private static final int UPDATE_WAIT_TIME = 2000;
   /** Field <code>SCHEDULE_RACE</code> : String */
   private static final String SCHEDULE_RACE = "SCHEDULE_RACE";
   /** Field <code>RACE</code> : String */
@@ -194,7 +190,6 @@ public class RaceSchedulePanel extends JPanel
 
   /**
    * author:      Owner<BR>
-   * date:        Dec 11, 2003<BR>
    * Package:     com.boyscouts.publish.results<BR>
    * File Name:   WebPublishFrame.java<BR>
    * Type Name:   ActionTrigger<BR>
@@ -242,7 +237,6 @@ public class RaceSchedulePanel extends JPanel
   }
   /**
    * Method createMasterScheduleDisplay.  This method will create the Master Schedule Display Table 
-   * and update the panel with the Table.  
    */
   private void createMasterScheduleDisplay()
   {
@@ -356,7 +350,6 @@ public class RaceSchedulePanel extends JPanel
     // First Remove the Entry ID, Undesirable View
     TableColumnModel model = table.getColumnModel();
     model.removeColumn(table.getColumn(RaceDataFieldName.ENTRY.toString()));
-    model.removeColumn(table.getColumn(RaceDataFieldName.DATE.toString()));
     // Re-Arrange the Columns as the Data model works for the Database, but user View is odd.
     // First Define an Array of the Fields to Move
     RaceDataFieldName[] listOrder = {RaceDataFieldName.LANE, RaceDataFieldName.VEHICLE_NUMBER, RaceDataFieldName.ROUND, RaceDataFieldName.HEAT,
@@ -546,7 +539,6 @@ public class RaceSchedulePanel extends JPanel
    *   <li>Get All the Race Data</li>
    *   <li>Reset the Current Times to Max</li>
    *   <li>Reset the Placements</li>
-   *   <li>Fire any client updates.</li>
    *   <li>Enable the Race Button</li>
    * </ul>
    */
@@ -564,7 +556,6 @@ public class RaceSchedulePanel extends JPanel
       rd.setPlacement(-1);
     }
 
-    mainApp.fireClientUpdates(true);
     raceBtn.setEnabled(true);
   }
   /**
@@ -583,7 +574,6 @@ public class RaceSchedulePanel extends JPanel
    *   <li>Disable both buttons</li>
    *   <li>Increment the Heat Counter</li>
    *   <li>If More Races exist populate the next round of races</li>
-   *   <li>If More Races exist Fire Any Updates to the MainApp, it will notify any clients</li>
    * </ul>
    */
   private void setupNextRace()
@@ -598,7 +588,6 @@ public class RaceSchedulePanel extends JPanel
     if (raceCount > heatNumber)
     {
       createSingleRaceScheduleDisplay();
-      mainApp.fireClientUpdates(true);
     }
     else
     {
@@ -620,8 +609,6 @@ public class RaceSchedulePanel extends JPanel
    *   <li>Check if the DaqDigIOAccess has an error. If so display it, else contine processing</li>
    *   <li>Continue...Get a list of the Lane Times</li>
    *   <li>Get The the race data container.</li>
-   *   <li>Update the Race Data Container times and Placement</li>
-   *   <li>Fire Updates in the Main App, it will notify all that it needs to notify</li>
    *   <li>Check for the Last Race</li>
    *   <li>enable the next race button if more races available</li>
    * </ul>
@@ -644,12 +631,9 @@ public class RaceSchedulePanel extends JPanel
     {
       double[] laneTimes = daqAccess.getLaneTimes();
       RaceDataContainer raceDataContainer = mainApp.getCurrentRaceData();
-      updateRaceDataContainerTimesAndPlacement(raceDataContainer, laneTimes);
       // The Display of the Top Racers of the current heat can be found in the 
-      // RacersViewFrame's updateDisplay() method.
     }
 
-    mainApp.fireClientUpdates(true);
     int raceCount = schedule.getRaceCount();
     int heatNumber = mainApp.getHeatNumber();
     if (raceCount > heatNumber)
@@ -660,14 +644,10 @@ public class RaceSchedulePanel extends JPanel
   }
 
   /**
-   * Method update(). will update the Display, and the Fields required to populate the Data.
    * Overridden Method:  <BR>
    * NOTE: This method also initalizes he Number of racers and the number of lanes. With the Use
    * of the contants LANES (see the declareation). The Lanes Count is determined.
-   * @see java.awt.Component#update(java.awt.Graphics)
-   * @param g - Graphics, the Graphics Object to Update.
    */
-  public void update( Graphics g )
   {
     int tempRaceNumb = RaceARama.getRaceCount();
     if (tempRaceNumb != this.currentRaceNumber)
@@ -690,15 +670,10 @@ public class RaceSchedulePanel extends JPanel
                                     JOptionPane.INFORMATION_MESSAGE);
       totalOfRacers.setValue(33); // Test Value
     }
-    super.update(g);
   }
   /**
-   * Method updateRaceDataContainerTimesAndPlacement. 
-   * Updates the Times for each Racer then applies the placement
-   * @param raceDataContainer - RaceDataContainer, the Data to update.
    * @param times - double[] - The Array of times for all lanes.
    */
-  private void updateRaceDataContainerTimesAndPlacement( RaceDataContainer raceDataContainer, double[] times )
   {
     // Set ALL the Times - Since we do not know exactly how many and how they sorted.
     // Iterate through the container then add get the lane, remember the lane is positve.
@@ -719,8 +694,6 @@ public class RaceSchedulePanel extends JPanel
       RaceData rd = raceDataContainer.elementAt(i);
       rd.setPlacement(i + 1);
     }
-    // Update the Racers Times and Ordering
-    mainApp.getRacersContainer().updateRacerTimes();
     // Re-Sort Based on Lane
     Collections.sort(data, new RaceDataComparator(RaceDataFieldName.LANE, true));
   }

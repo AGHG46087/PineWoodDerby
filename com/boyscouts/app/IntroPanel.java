@@ -1,6 +1,5 @@
 /*
  * @author: Owner 
- * date: Dec 16, 2003 
  * Package: com.boyscouts.app 
  * File Name: IntroPanel.java
  */
@@ -22,7 +21,6 @@ import com.boyscouts.domain.Log;
 
 /**
  * author: Owner 
- * date: Dec 16, 2003 
  * Package: com.boyscouts.app 
  * File Name: IntroPanel.java 
  * Type Name: IntroPanel 
@@ -143,7 +141,6 @@ public class IntroPanel extends JPanel
   public HyperlinkListener createHyperLinkListener()
   {
     return new HyperlinkListener() {
-      public void hyperlinkUpdate( HyperlinkEvent e )
       {
         if (e.getEventType() == HyperlinkEvent.EventType.ACTIVATED)
         {

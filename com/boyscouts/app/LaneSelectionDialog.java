@@ -23,7 +23,6 @@ import javax.swing.JPanel;
 
 /**
  * author:      Hans-Jurgen Greiner<BR>
- * date:        May 21, 2004<BR>
  * Package:     com.boyscouts.app<BR>
  * File Name:   LaneSelectionDialog.java<BR>
  * Type Name:   LaneSelectionDialog<BR>
@@ -61,7 +60,6 @@ public class LaneSelectionDialog extends JDialog
 
   /**
    * author:      Hans-Jurgen Greiner<BR>
-   * date:        May 21, 2004<BR>
    * Package:     com.boyscouts.app<BR>
    * File Name:   LaneSelectionDialog.java<BR>
    * Type Name:   ActionTrigger<BR>
@@ -81,7 +79,6 @@ public class LaneSelectionDialog extends JDialog
 
       if (cmd.equals(SUBMIT))
       {
-        readyToClose = validateSelectedLanes();
       }
       else if (cmd.equals(CANCEL))
       {
@@ -203,9 +200,7 @@ public class LaneSelectionDialog extends JDialog
 
   }
   /**
-   * Method updateSelectedLanes.  Updates the selectedLanes array and returns the count of selected Lanes.
    */
-  private int updateSelectedLanes()
   {
     int retVal = 0;
     for (int i = 0; i < LANES; i++)
@@ -216,12 +211,10 @@ public class LaneSelectionDialog extends JDialog
     return retVal;
   }
   /**
-   * Method validateSelectedLanes.  Counts the tagged array and returns the count of selected Lanes.
    * If the lanes count is valid than it will return true.  If the Lane count is invalid it will 
    * return false.
    * @return boolean - true if valid, otherwise false.
    */
-  private boolean validateSelectedLanes()
   {
     int count = 0;
     boolean retVal = false;
@@ -242,7 +235,6 @@ public class LaneSelectionDialog extends JDialog
     }
     else
     {
-      updateSelectedLanes();
     }
     return retVal;
   }
