@@ -8,7 +8,6 @@ import java.util.Vector;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 2, 2004<BR>
  * Package:     com.boyscouts.util.schedule<BR>
  * File Name:   HeatScheduleVector.java<BR>
  * Type Name:   HeatScheduleVector<BR>
