@@ -1,6 +1,5 @@
 /*
  * @author:			Owner
- * date:				Dec 9, 2003
  * Package:			com.boyscouts.domain
  * File Name:		WebPublishRacerSortField.java
  */
@@ -10,7 +9,6 @@ import java.io.Serializable;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 7, 2004<BR>
  * Package:     com.boyscouts.publish.results<BR>
  * File Name:   WebPublishRacerSortField.java<BR>
  * Type Name:   WebPublishRacerSortField<BR>

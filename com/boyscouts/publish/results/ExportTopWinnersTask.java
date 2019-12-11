@@ -22,7 +22,6 @@ import com.hgutil.GenericFileFilter;
 
 /**
  * author:      hgrein<BR>
- * date:        May 31, 2004<BR>
  * Package:     com.boyscouts.publish.results<BR>
  * File Name:   ExportTopWinnersTask.java<BR>
  * Type Name:   ExportTopWinnersTask<BR>

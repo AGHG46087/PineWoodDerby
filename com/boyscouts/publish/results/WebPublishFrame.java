@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Dec 19, 2003
  * Package:		com.boyscouts.publish.results
  * File Name:		WebPublishFrame.java
  */
@@ -64,7 +63,6 @@ import com.hgutil.swing.GridBagHelper;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 7, 2004<BR>
  * Package:     com.boyscouts.publish.results<BR>
  * File Name:   WebPublishFrame.java<BR>
  * Type Name:   WebPublishFrame<BR>
@@ -177,7 +175,6 @@ public class WebPublishFrame extends JFrame
 
   /**
    * author:      hgrein<BR>
-   * date:        Jun 8, 2004<BR>
    * Package:     com.boyscouts.publish.results<BR>
    * File Name:   WebPublishFrame.java<BR>
    * Type Name:   ActionTrigger<BR>
