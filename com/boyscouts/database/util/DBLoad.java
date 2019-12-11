@@ -11,7 +11,6 @@ import com.hgutil.StandardInput;
 
 /**
  * author:      Hans-Jurgen Greiner<BR>
- * date:        May 14, 2004<BR>
  * Package:     com.boyscouts.database.util<BR>
  * File Name:   DBLoad.java<BR>
  * Type Name:   DBLoad<BR>
