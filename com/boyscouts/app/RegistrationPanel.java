@@ -1,6 +1,5 @@
 /*
  * @author: Owner 
- * date: Dec 8, 2003 
  * Package: com.boyscouts.app File Name:
  * RegistrationPanel.java
  */
@@ -35,7 +34,6 @@ import javax.swing.table.TableColumnModel;
 
 import com.boyscouts.database.DeleteRacerPersonDBTask;
 import com.boyscouts.database.InsertRacerPersonDBTask;
-import com.boyscouts.database.UpdateRacerPersonDBTask;
 import com.boyscouts.domain.FieldLengths;
 import com.boyscouts.domain.Log;
 import com.boyscouts.domain.RacerContainer;
@@ -51,7 +49,6 @@ import com.hgutil.swing.event.PopupListener;
 
 /**
  * author: Owner 
- * date: Dec 8, 2003 
  * Package: com.boyscouts.app 
  * File Name: RegistrationPanel.java 
  * Type Name: RegistrationPanel 
@@ -133,7 +130,6 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
 
   /**
    * author:      Owner
-   * date:        Dec 8, 2003
    * Package:     com.boyscouts.app
    * File Name:   RegistrationPanel.java
    * Type Name:   ActionTrigger
@@ -178,7 +174,6 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
 
   /**
    * author:      Owner
-   * date:        Dec 8, 2003
    * Package:     com.boyscouts.app
    * File Name:   RegistrationPanel.java
    * Type Name:   ActionTrigger
@@ -240,7 +235,6 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
   }
   /**
    * Method to add a popup menu to the JTable
-   * Creation date: (01/11/2002 10:49:20 AM)
    * @param table A JTable The Display table used for graphical decisions
    */
   private void addPopupMenuToTable( HGTable table )
@@ -254,7 +248,6 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
     table.addMouseListener(popupListener);
   }
   /**
-   * Method addRacerToContainer.  This Will Add The Data to the Container, and Update the Row Count.
    * NOTE:  The Same does not exits for the DELETE, As The Table will control wether a Object can be deleted.
    * Meaning that it will not delete the Row if it is the LAst in the List.  
    * @param rp - RacerPerson
@@ -263,7 +256,6 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
   private boolean addRacerToContainer( RacerPerson rp )
   {
     boolean rc = mainApp.getRacersContainer().addRacerPerson(rp);
-    processAnyUpdates();
     return rc;
   }
   /**
@@ -419,13 +411,9 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
     timer.schedule(new InsertRacerPersonDBTask(rp), 100, 100);
   }
   /**
-   * Method databaseUpdateRacerPerson.  Spwan a Task to Update a Racer
-   * @param rp - RacerPerson, the ERpson that is being Updated in the Database
    */
-  private void databaseUpdateRacerPerson( RacerPerson rp )
   {
     Timer timer = new Timer();
-    timer.schedule(new UpdateRacerPersonDBTask(rp), 100, 100);
   }
   /**
    * Method debug.
@@ -491,16 +479,12 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
     this.addComponent(createEditButtonsPanel(), 1, 5, 1, 2, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL);
     this.addComponent(createRacerCountPanel(), 3, 5, 1, 1, GridBagConstraints.SOUTH, GridBagConstraints.HORIZONTAL);
     this.addFilledComponent(createSearchBarPanel(), 4, 2, 5, 1, GridBagConstraints.BOTH);
-    processAnyUpdates();
   }
   /**
-   * Method processAnyUpdates.  
    * 
    */
-  private void processAnyUpdates()
   {
     racerCount.setText("" + mainApp.getRacersContainer().getSize());
-    mainApp.fireClientUpdates(false);
   }
   /**
    * Method resetRaceRegistrants.  
@@ -545,13 +529,10 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
         { // We are ready, Do we want to Edit the Racers
           // OK Babay, slam him in there
           if (addRacerToContainer(rp))
-          { // The Record does not already Exits, We need to update the Table, And
-            // EDIT/Update DB.
             table.tableChanged(new TableModelEvent(dataModel, row, row, TableModelEvent.ALL_COLUMNS, TableModelEvent.INSERT));
             row += (mainApp.getRacersContainer().getSize() == 1) ? 0 : 1;
             table.setRowSelectionInterval(row, row);
             table.repaint();
-            databaseUpdateRacerPerson(rp);
           }
         }
       }
@@ -587,13 +568,10 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
           { // We are ready, Do we want to Edit the Racers
             // OK Babay, slam him in there
             if (addRacerToContainer(rp))
-            { // The Record does not already Exits, We need to update the Table, And
-              // EDIT/Update DB.
               table.tableChanged(new TableModelEvent(dataModel, row, row, TableModelEvent.ALL_COLUMNS, TableModelEvent.INSERT));
               row += (mainApp.getRacersContainer().getSize() == 1) ? 0 : 1;
               table.setRowSelectionInterval(row, row);
               table.repaint();
-              databaseUpdateRacerPerson(rp);
             }
           }
         }
@@ -619,7 +597,6 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
     newRacer.setVisible(true);
     RacerPerson rp = newRacer.getEditableRacer();
     if (addRacerToContainer(rp))
-    { // The Racer Did not Exist, Update the Table, and Insert into the Database
       table.tableChanged(new TableModelEvent(dataModel, row, row, TableModelEvent.ALL_COLUMNS, TableModelEvent.INSERT));
       row += (mainApp.getRacersContainer().getSize() == 1) ? 0 : 1;
       table.setRowSelectionInterval(row, row);
@@ -651,14 +628,12 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
       table.setRowSelectionInterval(row, row);
       table.repaint();
       databaseDeleteRacerPerson(rp);
-      processAnyUpdates();
     }
   }
   /**
    * Method editCurrentRacerInTable.  This Method will invoke the NewRacerDialog and show it to the user.
    * After the User has filled in the Form, it will add the record ( provided the user correctly
    * submitted, the record.  if the Record retured from the dialog is null, there is no other action.
-   * If the record is valid, it will update it into the container/table and spawn a task to update it 
    * to the DB.
    */
   private void tableEditCurrentRacer()
@@ -672,11 +647,9 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
     newRacer.setVisible(true);
     rp = newRacer.getEditableRacer();
     if (rp != null)
-    { // The Record already exists in the Container, Simply update it, do not re-insert
       table.tableChanged(new TableModelEvent(dataModel, row, row, TableModelEvent.ALL_COLUMNS, TableModelEvent.INSERT));
       table.setRowSelectionInterval(row, row);
       table.repaint();
-      databaseUpdateRacerPerson(rp);
     }
   }
   /**
@@ -703,16 +676,13 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
       row -= (row == 0) ? 0 : 1; // Reset the Row to ensure we are in Range.
       table.setRowSelectionInterval(row, row);
       table.repaint();
-      processAnyUpdates();
     }
   }
 
   /**
    * Overridden Method:  
-   * @see java.awt.Component#update(java.awt.Graphics)
    * @param g - Graphics
    */
-  public void update( Graphics g )
   {
     int tempRaceNumb = RaceARama.getRaceCount();
     if (tempRaceNumb != this.currentRaceNumber)
@@ -720,6 +690,5 @@ public class RegistrationPanel extends GridBagHelper implements FieldLengths
       resetRaceRegistrants();
       this.currentRaceNumber = tempRaceNumb;
     }
-    super.update(g);
   }
 }
