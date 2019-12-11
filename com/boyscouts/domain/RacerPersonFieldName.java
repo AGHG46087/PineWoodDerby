@@ -1,6 +1,5 @@
 /*
  * @author:			Owner
- * date:				Dec 9, 2003
  * Package:			com.boyscouts.domain
  * File Name:		RacerPersonFieldName.java
  */
@@ -10,7 +9,6 @@ import java.io.Serializable;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 2, 2004<BR>
  * Package:     com.boyscouts.domain<BR>
  * File Name:   RacerPersonFieldName.java<BR>
  * Type Name:   RacerPersonFieldName<BR>

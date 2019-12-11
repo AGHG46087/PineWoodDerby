@@ -4,7 +4,6 @@ import java.util.Date;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 2, 2004<BR>
  * Package:     com.boyscouts.domain<BR>
  * File Name:   RacerPersonComparator.java<BR>
  * Type Name:   RacerPersonComparator<BR>
