@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Dec 11, 2003
  * Package:		com.boyscouts.database
  * File Name:		InsertRacerPersonDBTask.java
  */
@@ -11,7 +10,6 @@ import com.boyscouts.domain.RacerPerson;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 3, 2004<BR>
  * Package:     com.boyscouts.database<BR>
  * File Name:   InsertRacerPersonDBTask.java<BR>
  * Type Name:   InsertRacerPersonDBTask<BR>
