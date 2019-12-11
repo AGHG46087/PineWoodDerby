@@ -1,6 +1,5 @@
 /*
  * @author:			Owner
- * date:				Dec 9, 2003
  * Package:			com.boyscouts.database.exception
  * File Name:		DBAccessInsertException.java
  */
@@ -8,7 +7,6 @@ package com.boyscouts.database.exception;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 3, 2004<BR>
  * Package:     com.boyscouts.database.exception<BR>
  * File Name:   DBAccessInsertException.java<BR>
  * Type Name:   DBAccessInsertException<BR>
