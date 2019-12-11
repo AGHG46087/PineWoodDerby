@@ -1,6 +1,5 @@
 /*
  * @author:			Owner
- * date:				Dec 9, 2003
  * Package:			com.boyscouts.database
  * File Name:		RaceARamaDB.java
  */
@@ -21,7 +20,6 @@ import com.boyscouts.domain.RacerPersonFieldName;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 3, 2004<BR>
  * Package:     com.boyscouts.database<BR>
  * File Name:   RaceARamaDB.java<BR>
  * Type Name:   RaceARamaDB<BR>
