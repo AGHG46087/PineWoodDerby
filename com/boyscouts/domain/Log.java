@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Dec 21, 2003
  * Package:		com.boyscouts.domain
  * File Name:		Log.java
  */
@@ -10,7 +9,6 @@ import com.hgutil.ParseData;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 2, 2004<BR>
  * Package:     com.boyscouts.domain<BR>
  * File Name:   Log.java<BR>
  * Type Name:   Log<BR>

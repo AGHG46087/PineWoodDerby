@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Jan 14, 2004
  * Package:		com.boyscouts.domain
  * File Name:		LightLabel.java
  */
@@ -14,7 +13,6 @@ import javax.swing.JLabel;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 2, 2004<BR>
  * Package:     com.boyscouts.domain<BR>
  * File Name:   LightLabel.java<BR>
  * Type Name:   LightLabel<BR>
