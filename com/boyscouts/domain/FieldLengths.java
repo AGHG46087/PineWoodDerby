@@ -4,7 +4,6 @@ import java.awt.Dimension;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 2, 2004<BR>
  * Package:     com.boyscouts.domain<BR>
  * File Name:   FieldLengths.java<BR>
  * Type Name:   FieldLengths<BR>
