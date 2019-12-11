@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Jan 2, 2004
  * Package:		com.boyscouts.util.schedule.table
  * File Name:		RaceScheduleTable.java
  */
@@ -16,7 +15,6 @@ import javax.swing.table.TableModel;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 7, 2004<BR>
  * Package:     com.boyscouts.util.schedule.table<BR>
  * File Name:   RaceScheduleTable.java<BR>
  * Type Name:   RaceScheduleTable<BR>

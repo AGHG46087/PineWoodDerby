@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Jan 2, 2004
  * Package:		com.boyscouts.util.schedule.table
  * File Name:		RowHeaderListModel.java
  */
@@ -12,7 +11,6 @@ import javax.swing.AbstractListModel;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 7, 2004<BR>
  * Package:     com.boyscouts.util.schedule.table<BR>
  * File Name:   RowHeaderListModel.java<BR>
  * Type Name:   RowHeaderListModel<BR>

@@ -29,7 +29,6 @@ import javax.swing.border.MatteBorder;
 
 /**
  * author:      Hans-Jurgen Greiner<BR>
- * date:        May 24, 2004<BR>
  * Package:     com.boyscouts.util.schedule.table<BR>
  * File Name:   PrintPreview.java<BR>
  * Type Name:   PrintPreview<BR>
@@ -274,7 +273,6 @@ public class PrintPreview extends JFrame
 
   /**
    * author:      Hans-Jurgen Greiner<BR>
-   * date:        May 24, 2004<BR>
    * Package:     com.boyscouts.util.schedule.table<BR>
    * File Name:   PrintPreview.java<BR>
    * Type Name:   PreviewContainer<BR>
@@ -390,7 +388,6 @@ public class PrintPreview extends JFrame
 
   /**
    * author:      Hans-Jurgen Greiner<BR>
-   * date:        May 24, 2004<BR>
    * Package:     com.boyscouts.util.schedule.table<BR>
    * File Name:   PrintPreview.java<BR>
    * Type Name:   PagePreview<BR>
