@@ -31,7 +31,6 @@ import com.hgutil.data.FixedDouble;
 
 /**
  * author:      Hans-Jurgen Greiner<BR>
- * date:        May 17, 2004<BR>
  * Package:     com.boyscouts.app<BR>
  * File Name:   RacersViewHeatWinnerDialog.java<BR>
  * Type Name:   RacersViewHeatWinnerDialog<BR>
@@ -157,7 +156,6 @@ public class RacersViewHeatWinnerDialog extends JDialog
   {
     /**
      * @author:     Hans-Jurgen Greiner<BR>
-     * date:        May 22, 2004<BR>
      * Package:     com.boyscouts.app<BR>
      * File Name:   RacersViewHeatWinnerDialog.java<BR>
      * Type Name:   CycleDisplayTask<BR>

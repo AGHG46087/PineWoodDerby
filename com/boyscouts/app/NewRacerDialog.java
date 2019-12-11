@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Dec 10, 2003
  * Package:		cis163aa.demos.layouts
  * File Name:		NewRacerDialog.java
  */
@@ -8,7 +7,6 @@ package com.boyscouts.app;
 
 /**
  * author:      Owner
- * date:        Dec 10, 2003
  * Package:     cis163aa.demos.layouts
  * File Name:   NewRacerDialog.java
  * Type Name:   NewRacerDialog
@@ -169,7 +167,6 @@ public class NewRacerDialog extends JDialog
 
   /**
    * author:      Owner
-   * date:        Dec 11, 2003
    * Package:     com.boyscouts.app
    * File Name:   NewRacerDialog.java
    * Type Name:   ActionTrigger
@@ -234,7 +231,6 @@ public class NewRacerDialog extends JDialog
 
     /**
      * Method populateRacerPerson.  
-     * @param rp - RacerPerson, the data to be updated from populated fields on Screen
      */
     private void populateRacerPerson( RacerPerson rp )
     {

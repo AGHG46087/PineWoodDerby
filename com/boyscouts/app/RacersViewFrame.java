@@ -1,6 +1,5 @@
 /*
  * @author:		Owner
- * date:		Jan 3, 2004
  * Package:		com.boyscouts.app
  * File Name:		RacersViewFrame.java
  */
@@ -34,7 +33,6 @@ import com.hgtable.HGTable;
 
 /**
  * author:      Owner
- * date:        Jan 3, 2004
  * Package:     com.boyscouts.app
  * File Name:   RacersViewFrame.java
  * Type Name:   RacersViewFrame
@@ -157,7 +155,7 @@ public class RacersViewFrame extends JFrame
     // First Remove the Undesirable View of Race Data
     RacerPersonFieldName[] removeFields = {RacerPersonFieldName.ID, RacerPersonFieldName.DISTRICT, RacerPersonFieldName.PACK, RacerPersonFieldName.DEN,
                                            RacerPersonFieldName.ADDRESS, RacerPersonFieldName.CITY, RacerPersonFieldName.STATE, RacerPersonFieldName.PHONE,
-                                           RacerPersonFieldName.POSTAL, RacerPersonFieldName.DATE_REGISTERED, RacerPersonFieldName.MIN_VALUE,
+nFieldName.MIN_VALUE,
                                            RacerPersonFieldName.MAX_VALUE, RacerPersonFieldName.AVG_VALUE, RacerPersonFieldName.STD_DEV,
                                            RacerPersonFieldName.RACE_NAME};
     // Begin Removal of Columns not desired to be seen.
@@ -214,7 +212,6 @@ public class RacersViewFrame extends JFrame
     // First Remove the Entry ID, Undesirable View
     TableColumnModel model = singleTable.getColumnModel();
     model.removeColumn(singleTable.getColumn(RaceDataFieldName.ENTRY.toString()));
-    model.removeColumn(singleTable.getColumn(RaceDataFieldName.DATE.toString()));
     model.removeColumn(singleTable.getColumn(RaceDataFieldName.ROUND.toString()));
     model.removeColumn(singleTable.getColumn(RaceDataFieldName.ID.toString()));
     // Re-Arrange the Columns as the Data model works for the Database, but user View is odd.
@@ -279,13 +276,10 @@ public class RacersViewFrame extends JFrame
     return value;
   }
   /**
-   * Method updateDisplay.  Method will Update the Two Table Displays
    * 
    */
-  public void updateDisplay()
   {
     boolean displayWinnerDialog = true;
-    // First Update the Single Race Display
     if (currentHEAT != mainApp.getHeatNumber())
     {
       createSingleRaceScheduleDisplay();
@@ -306,13 +300,9 @@ public class RacersViewFrame extends JFrame
     tableModel = overallTable.getModel();
     overallTable.tableChanged(new TableModelEvent(tableModel));
     overallTable.repaint();
-    // Invalidate and Revalidate the Split Pane
     Component comp = this.getContentPane().getComponent(0);
-    comp.invalidate();
-    comp.validate();
 
     if (displayWinnerDialog)
-    { // If the Updates was for a refresh only, then display the current Winners.
       RaceDataContainer currentRaceData = mainApp.getCurrentRaceData();
       RacerContainer racerCont = mainApp.getRacersContainer();
       new RacersViewHeatWinnerDialog(this, currentRaceData, racerCont);
