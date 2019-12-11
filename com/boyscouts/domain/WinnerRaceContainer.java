@@ -1,6 +1,5 @@
 /*
  * @author:		hgrein
- * date:		Jan 8, 2004
  * Package:		com.boyscouts.domain
  * File Name:		WinnerRaceContainer.java
  */
@@ -18,7 +17,6 @@ import com.hgutil.ParseData;
 
 /**
  * author:      Hans-Jurgen Greiner<BR>
- * date:        Jun 4, 2004<BR>
  * Package:     com.boyscouts.domain<BR>
  * File Name:   WinnerRaceContainer.java<BR>
  * Type Name:   WinnerRaceContainer<BR>

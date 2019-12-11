@@ -1,6 +1,5 @@
 /*
  * @author:			Owner
- * date:				Dec 9, 2003
  * Package:			com.boyscouts.domain
  * File Name:		WinPlaceShow.java
  */
@@ -13,7 +12,6 @@ import javax.swing.JLabel;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 3, 2004<BR>
  * Package:     com.boyscouts.domain<BR>
  * File Name:   WinPlaceShow.java<BR>
  * Type Name:   WinPlaceShow<BR>

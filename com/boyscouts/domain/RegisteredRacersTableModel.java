@@ -17,7 +17,6 @@ import com.hgtable.HGTableModel;
 
 /**
  * author:      hgrein<BR>
- * date:        Jun 2, 2004<BR>
  * Package:     com.boyscouts.domain<BR>
  * File Name:   RegisteredRacersTableModel.java<BR>
  * Type Name:   RegisteredRacersTableModel<BR>
@@ -40,7 +39,6 @@ public class RegisteredRacersTableModel extends HGTableModel
 
   /**
    * author:      hgrein<BR>
-   * date:        Jun 2, 2004<BR>
    * Package:     com.boyscouts.domain<BR>
    * File Name:   RegisteredRacersTableModel.java<BR>
    * Type Name:   ColumnListener<BR>
